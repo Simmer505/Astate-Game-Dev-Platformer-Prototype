@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8272832248309273054
+--- !u!1 &1776862034710008428
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,12 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8272832248309273055}
-  - component: {fileID: 8272832248309273043}
-  - component: {fileID: 8272832248309273042}
-  - component: {fileID: 8272832248309273053}
-  - component: {fileID: 8272832248309273040}
-  - component: {fileID: 8272832248309273041}
+  - component: {fileID: 5836836056293904154}
+  - component: {fileID: 4509996058341546953}
+  - component: {fileID: 8562160819522423289}
+  - component: {fileID: 2789724065969357325}
+  - component: {fileID: 358709699082214645}
+  - component: {fileID: 133785563406405982}
   m_Layer: 0
   m_Name: RollingBall
   m_TagString: Obstacle
@@ -21,35 +21,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8272832248309273055
+--- !u!4 &5836836056293904154
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8272832248309273054}
+  m_GameObject: {fileID: 1776862034710008428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 50.9, z: 0}
+  m_LocalPosition: {x: 27.606245, y: 4, z: -29.415327}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8272832248309273043
+--- !u!33 &4509996058341546953
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8272832248309273054}
+  m_GameObject: {fileID: 1776862034710008428}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8272832248309273042
+--- !u!23 &8562160819522423289
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8272832248309273054}
+  m_GameObject: {fileID: 1776862034710008428}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 968df258636e04644acfde352cb86a46, type: 2}
+  - {fileID: 2100000, guid: 53823929fa5be7d4fa45c89cc59345ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,26 +85,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8272832248309273053
+--- !u!135 &2789724065969357325
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8272832248309273054}
+  m_GameObject: {fileID: 1776862034710008428}
   m_Material: {fileID: 13400000, guid: 695f9b8fb5d4c3c4780e3a53fba8cfd8, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &8272832248309273040
+--- !u!54 &358709699082214645
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8272832248309273054}
+  m_GameObject: {fileID: 1776862034710008428}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -114,13 +114,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8272832248309273041
+--- !u!114 &133785563406405982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8272832248309273054}
+  m_GameObject: {fileID: 1776862034710008428}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76f865bc65e5f8e44965fcde7699401a, type: 3}
