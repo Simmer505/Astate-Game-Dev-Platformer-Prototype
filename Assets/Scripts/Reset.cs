@@ -6,6 +6,8 @@ public class Reset : MonoBehaviour
 {
     public GameObject player;
 
+    CourseTimer timerScript;
+
     private CharacterController charController;
 
     // Start is called before the first frame update
@@ -23,6 +25,9 @@ public class Reset : MonoBehaviour
             player.transform.position = new Vector3(0, 0, 0);
             player.transform.rotation = Quaternion.identity;
             charController.enabled = true;
+            timerScript = player.GetComponent <CourseTimer> ();
+            timerScript.timer = 0;
+            timerScript.start = false;
         }
         // Delete any obstacles that go out of bounds
         else if (other.tag == "Obstacle")
