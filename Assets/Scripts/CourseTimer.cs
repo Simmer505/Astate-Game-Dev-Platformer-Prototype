@@ -8,6 +8,8 @@ public class CourseTimer : MonoBehaviour
     public bool start = false;
     public float timer = 0;
 
+    public GameObject timerText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +23,7 @@ public class CourseTimer : MonoBehaviour
         {
             timer += Time.deltaTime;
         }
-        Debug.Log(timer);
-        
+        timerText.GetComponent<TMPro.TextMeshProUGUI>().text = (Mathf.Round(timer * 100.0f) * 0.01f).ToString();
     }
 
 }
