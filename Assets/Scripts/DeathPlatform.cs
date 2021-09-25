@@ -10,6 +10,8 @@ public class DeathPlatform : MonoBehaviour
         {
             other.GetComponent<CharacterController>().enabled = false;
             other.transform.position = Vector3.zero;
+            other.GetComponent<CourseTimer>().start = false;
+            other.GetComponent<CourseTimer>().timer = 0;
             other.GetComponent<CharacterController>().enabled = true;
         }
     }

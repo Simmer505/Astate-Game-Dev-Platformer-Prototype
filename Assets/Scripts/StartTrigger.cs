@@ -14,6 +14,7 @@ public class StartTrigger : MonoBehaviour
         {
             playerTimer = player.GetComponent <CourseTimer> ();
             playerTimer.start = true;
+            playerTimer.timer = 0;
         } 
     }
 }

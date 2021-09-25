@@ -6,7 +6,7 @@ public class Reset : MonoBehaviour
 {
     public GameObject player;
 
-    CourseTimer timerScript;
+    private CourseTimer timerScript;
 
     private CharacterController charController;
 
