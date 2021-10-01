@@ -14,24 +14,22 @@ public class Elevator : MonoBehaviour
     private bool stopped = false;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         distanceToMove = new Vector3(0, Speed, 0);
         tunnelStartingY = transform.position.y;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Switch goingUp if tunnel is below its starting position or above the height offset, is not stopped, and is going in the wrong direction
+        // Switch goingUp if platform is below its starting position or above the height offset, is not stopped, and is going in the wrong direction
         if ((transform.position.y <= tunnelStartingY && !goingUp && !stopped) || (transform.position.y >= tunnelStartingY + totalDistance && goingUp && !stopped))
         {
 
             StartCoroutine(StopTimer());
         }
 
-        // Move tunnel in the direction of goingUp
+        // Move platform in the direction of goingUp
         if (!stopped && goingUp)
         {
             transform.Translate(distanceToMove * Time.deltaTime, Space.World);
@@ -45,7 +43,6 @@ public class Elevator : MonoBehaviour
 
     IEnumerator StopTimer()
     {
-        // Timer
         stopped = true;
         yield return new WaitForSeconds(stopTime);
         goingUp = !goingUp;
