@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Reset : MonoBehaviour
 {
@@ -10,24 +11,13 @@ public class Reset : MonoBehaviour
 
     private CharacterController charController;
 
-    // Start is called before the first frame update
-    private void Start()
-    {
-        charController = player.GetComponent<CharacterController>();
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         // If the player goes out of bounds move it back the the starting point
         if (other.tag == "Player")
         {
-            charController.enabled = false;
-            player.transform.position = new Vector3(0, 0, 0);
-            player.transform.rotation = Quaternion.identity;
-            charController.enabled = true;
-            timerScript = player.GetComponent <CourseTimer> ();
-            timerScript.timer = 0;
-            timerScript.start = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         // Delete any obstacles that go out of bounds
         else if (other.tag == "Obstacle")
